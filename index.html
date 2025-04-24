@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-gray-100">
+<nav class="bg-red-600 flex justify-between items-center text-white py-3 px-3">
+  <div class="font-bold text-2xl" >Burger</div>
+
+<ul class=" space-x-3 hidden md:flex">
+  <li><a href="#" class="hover:text-yellow-300">Home</a></li>
+  <li><a href="#" class="hover:text-yellow-300">Deals</a></li>
+  <li><a href="#" class="hover:text-yellow-300">About</a></li>
+  <li><a href="#" class="hover:text-yellow-300">Contact</a></li>
+</ul>
+<button id="menu-btn" class="md:hidden focus:outline-none ">
+  <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+  <i id="close-icon" class="fa-solid fa-xmark text-xl hidden"></i>
+</button>
+
+</nav>
+
+<div id="mobile-menu" class="hidden md:hidden bg-red-600 text-white px-6 py-4 space-y-2 ">
+
+  <a href="#" class="block hover:text-yellow-300">Home</a>
+  <a href="#" class="block hover:text-yellow-300">Menu</a>
+  <a href="#" class="block hover:text-yellow-300">Deals</a>
+  <a href="#" class="block hover:text-yellow-300">Contact</a>
+  
+</div>
+
+  <section class="flex flex-col md:flex-row items-center justify-between px-8 py-16 bg-yellow-100">
+    <div class="md:w-1/2 mb-8 md:mb-0">
+      <h1 class="text-4xl font-extrabold mb-4">Flame-Grilled Perfection</h1>
+      <p class="text-lg mb-6">Get your hands on the King of Burgers, hot and juicy straight off the grill.</p>
+      <a href="#" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-xl transition">
+        Order Now
+      </a>
+    </div>
+    <div class="md:w-1/2">
+      <img src="hero-background1.jpg" alt="Burger King Burger" class="rounded-xl shadow-xl w-full max-w-md mx-auto" />
+    </div>
+  </section>
+ 
+
+  <footer class="text-center py-6 bg-red-600 text-white ">
+   
+  <p class="mt-2">
+    📞 <a href="tel:+1234567890" class="underline hover:text-yellow-300">+1 (234) 567-890</a> |
+    📧 <a href="mailto:info@burgerking.com" class="underline hover:text-yellow-300">info@burgerking.com</a>
+  </p>
+<div>
+  <p class="mt-2 bg-black rounded-2xl  hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-xl transition ">&copy; 2025 Burger King. All rights reserved.</p>
+  </footer>
+</div>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    menuIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+</html>
